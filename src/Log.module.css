@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.inputContainer {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.inputContainer button {
+  width: 23%;
+  height: 33px;
+  border: none;
+  background-color: rgba(0, 0, 255, 0.678);
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+.inputContainer button:active {
+  background-color: rgba(0, 0, 255, 0.869);
+}
+@media screen and (max-width: 480px), (max-width: 600px) {
+  .inputContainer button {
+    font-size: 10px;
+    height: 25px;
+  }
+}

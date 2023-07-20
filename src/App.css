@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Ysabeau+SC:wght@800&display=swap");
+html {
+  font-size: 62.5%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.466) 30%,
+    blue,
+    black 100%
+  );
+  overflow-x: hidden;
+}
+.App-container {
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(50px);
+  box-shadow: 2px 0 5px rgba(255, 255, 255, 0.612),
+    0px 2px 5px rgba(255, 255, 255, 0.612),
+    -2px 0 5px rgba(255, 255, 255, 0.604), 0 -2px 5px rgba(255, 255, 255, 0.612);
+  border: 1px solid silver;
+  width: 45vw;
+  height: 70vh;
+  padding: 1.6rem;
+  overflow: hidden;
+}
+.section-select {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20%;
+  position: relative;
+  overflow: hidden;
+}
+.section-select button {
+  border: none;
+  width: 20%;
+  height: 70%;
+  color: rgba(255, 0, 0, 0.466);
+  cursor: pointer;
+  transition: all 0.2s linear;
+  font-family: "Ysabeau SC", sans-serif;
+}
+.section-select button:active {
+  color: red;
+}
+.scroller {
+  position: absolute;
+  border: 2px solid white;
+  width: 45%;
+  left: 0;
+  top: 90%;
+}
+.content-container {
+  width: 100%;
+  height: 92%;
+}
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+.menu {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 12%;
+  left: 85%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(50px);
+  box-shadow: 2px 0 5px black, 0 2px 5px black, -2px 0 5px black,
+    0 -2px 5px black;
+  border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .App-container {
+    width: 80vw;
+    height: 50vh;
+  }
+  .section-select button {
+    font-size: 10px;
+  }
+}

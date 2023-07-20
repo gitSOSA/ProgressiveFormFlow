@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Ysabeau+SC:wght@800&display=swap");
+.formContainer {
+  width: 100%;
+  height: 100%;
+}
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header h1 {
+  text-transform: uppercase;
+  font-family: "Ysabeau SC", sans-serif;
+}
+.body {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+.Username,
+.UserContacts,
+.EmailPassword {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+input {
+  width: 55%;
+  padding: 1.2em;
+  border: 1px solid rgba(0, 0, 255, 0.515);
+  outline: none;
+  transition: all 0.2s linear;
+  background-color: transparent;
+  color: white;
+  font-weight: bolder;
+  font-family: "Lato", sans-serif;
+}
+input::placeholder {
+  color: white;
+}
+input:focus {
+  border-color: rgba(255, 0, 0, 0.73);
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+}
+.footer button {
+  width: 23%;
+  height: 70%;
+  border: none;
+  background-color: rgba(0, 0, 255, 0.678);
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+.footer button:active {
+  background-color: rgba(0, 0, 255, 0.869);
+}
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+@media screen and (max-width: 480px), (max-width: 600px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  input {
+    width: 60%;
+    padding: 0.8em;
+  }
+  .form {
+    justify-content: center;
+  }
+  .footer button {
+    font-size: 10px;
+  }
+}
