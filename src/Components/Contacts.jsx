@@ -4,14 +4,7 @@ import styles from "../Sign.module.css";
 const Contacts = ({ formState, setFormState }) => {
   return (
     <div className={styles.UserContacts}>
-      <input
-        type="number"
-        placeholder="Phone Number"
-        value={formState.phoneNumber}
-        onChange={(event) =>
-          setFormState({ ...formState, phoneNumber: event.target.value })
-        }
-      />
+      <input type="number" placeholder="Phone Number" />
       <input
         type="text"
         placeholder="Nationality"
@@ -20,14 +13,7 @@ const Contacts = ({ formState, setFormState }) => {
           setFormState({ ...formState, nationality: event.target.value })
         }
       />
-      <input
-        type="date"
-        placeholder="Birth Date"
-        value={formState.birthDate}
-        onChange={(event) =>
-          setFormState({ ...formState, birthDate: event.target.value })
-        }
-      />
+      <input type="date" placeholder="Birth Date" />
     </div>
   );
 };
