@@ -17,7 +17,7 @@ const SignUp = () => {
     userName: "",
     phoneNumber: "",
     nationality: "",
-    birthDate: "",
+    birthDate: "Birth Date",
     email: "",
     password: "",
     passwordConfirmation: "",
